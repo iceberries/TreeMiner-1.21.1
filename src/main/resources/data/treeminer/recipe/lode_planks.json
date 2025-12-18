@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": ["treeminer:lode_log"],
+  "result": {
+    "id": "treeminer:lode_planks",
+    "count": 4
+  }
+}

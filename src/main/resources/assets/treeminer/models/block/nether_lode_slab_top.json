@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "treeminer:block/nether_lode_planks",
+    "side": "treeminer:block/nether_lode_planks",
+    "top": "treeminer:block/nether_lode_planks"
+  }
+}

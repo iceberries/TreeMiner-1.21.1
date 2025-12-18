@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "ingredient": "treeminer:nether_pod_quartz",
+  "result": {
+    "id": "minecraft:quartz"
+  },
+  "experience": 0.1,
+  "cookingtime": 100
+}

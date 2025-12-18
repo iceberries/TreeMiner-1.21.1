@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "#A#",
+    "###"
+  ],
+  "key": {
+    "A": "minecraft:oak_sapling",
+    "#": "#minecraft:redstone_ores"
+  },
+  "result": {
+    "id": "treeminer:lode_sapling_redstone",
+    "count": 1
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "ingredient": "treeminer:pod_diamond",
+  "result": {
+    "id": "treeminer:cooked_pod_diamond"
+  },
+  "experience": 0.1,
+  "cookingtime": 100
+}

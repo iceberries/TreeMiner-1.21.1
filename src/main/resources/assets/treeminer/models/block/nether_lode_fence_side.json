@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "treeminer:block/nether_lode_planks"
+  }
+}

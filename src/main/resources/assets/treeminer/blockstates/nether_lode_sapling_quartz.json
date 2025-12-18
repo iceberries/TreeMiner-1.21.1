@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "stage=0": {
+      "model": "treeminer:block/nether_lode_sapling_quartz"
+    },
+    "stage=1": {
+      "model": "treeminer:block/nether_lode_sapling_quartz"
+    }
+  }
+}

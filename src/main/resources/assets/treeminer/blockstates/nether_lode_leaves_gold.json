@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "stage=0": {
+      "model": "treeminer:block/nether_lode_leaves_gold"
+    },
+    "stage=1": {
+      "model": "treeminer:block/nether_lode_leaves_gold"
+    },
+    "stage=2": {
+      "model": "treeminer:block/nether_lode_leaves_gold"
+    },
+    "stage=3": {
+      "model": "treeminer:block/nether_lode_leaves_gold"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "treeminer:block/nether_lode_sapling_glowstone"
+  },
+  "render_type": "minecraft:cutout"
+}

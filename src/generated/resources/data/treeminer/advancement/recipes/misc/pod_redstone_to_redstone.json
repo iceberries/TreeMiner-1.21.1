@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pod_redstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "treeminer:pod_redstone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "treeminer:pod_redstone_to_redstone"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pod_redstone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "treeminer:pod_redstone_to_redstone"
+    ]
+  }
+}

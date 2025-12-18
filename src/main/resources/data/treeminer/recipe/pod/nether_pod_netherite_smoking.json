@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "ingredient": "treeminer:nether_pod_netherite",
+  "result": {
+    "id": "treeminer:cooked_nether_pod_netherite"
+  },
+  "experience": 0.1,
+  "cookingtime": 100
+}

@@ -1,0 +1,12 @@
+{
+  "values": [
+    "treeminer:lode_sapling_coal",
+    "treeminer:lode_sapling_iron",
+    "treeminer:lode_sapling_copper",
+    "treeminer:lode_sapling_lapis",
+    "treeminer:lode_sapling_emerald",
+    "treeminer:lode_sapling_gold",
+    "treeminer:lode_sapling_redstone",
+    "treeminer:lode_sapling_diamond"
+  ]
+}

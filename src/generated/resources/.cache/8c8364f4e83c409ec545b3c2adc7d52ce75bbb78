@@ -1,0 +1,16 @@
+// 1.21.1	2025-12-18T00:58:41.2756524	Tags for minecraft:item mod id vanilla
+5cd91e2fd7a50de3cd5b6699a4c2bf151842e0e1 data/minecraft/tags/item/boats.json
+5cd91e2fd7a50de3cd5b6699a4c2bf151842e0e1 data/minecraft/tags/item/hanging_signs.json
+5cd91e2fd7a50de3cd5b6699a4c2bf151842e0e1 data/minecraft/tags/item/signs.json
+5cd91e2fd7a50de3cd5b6699a4c2bf151842e0e1 data/minecraft/tags/item/wooden_buttons.json
+5cd91e2fd7a50de3cd5b6699a4c2bf151842e0e1 data/minecraft/tags/item/wooden_doors.json
+5cd91e2fd7a50de3cd5b6699a4c2bf151842e0e1 data/minecraft/tags/item/wooden_fences.json
+5cd91e2fd7a50de3cd5b6699a4c2bf151842e0e1 data/minecraft/tags/item/wooden_pressure_plates.json
+5cd91e2fd7a50de3cd5b6699a4c2bf151842e0e1 data/minecraft/tags/item/wooden_slabs.json
+5cd91e2fd7a50de3cd5b6699a4c2bf151842e0e1 data/minecraft/tags/item/wooden_stairs.json
+5cd91e2fd7a50de3cd5b6699a4c2bf151842e0e1 data/minecraft/tags/item/wooden_trapdoors.json
+18b456d64188f5fd3be785a9343c5c90e284bc43 data/treeminer/tags/item/cooked_nether_pod.json
+5cd91e2fd7a50de3cd5b6699a4c2bf151842e0e1 data/treeminer/tags/item/lode_planks.json
+5880c1f2fd4249bfc497ddfd66373cad9d902398 data/treeminer/tags/item/nether_lode_planks.json
+95b95634cac9151732d230c349ee3c119ef673e8 data/treeminer/tags/item/nether_nether_pod.json
+644533d8c39e89309250c541e1e5d6205ef539bd data/treeminer/tags/item/nether_pod.json

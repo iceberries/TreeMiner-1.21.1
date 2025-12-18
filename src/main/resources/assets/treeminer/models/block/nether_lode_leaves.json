@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "treeminer:block/nether_lode_leaves"
+  }
+}

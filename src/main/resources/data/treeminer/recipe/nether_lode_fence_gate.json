@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "A#A",
+    "A#A"
+  ],
+  "key": {
+    "#": {
+      "tag": "treeminer:nether_lode_planks"
+    },
+    "A": "minecraft:stick"
+  },
+  "result": {
+    "id": "treeminer:nether_lode_fence_gate",
+    "count": 1
+  }
+}

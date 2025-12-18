@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "#A#",
+    "#A#"
+  ],
+  "key": {
+    "#": {
+      "tag": "treeminer:lode_planks"
+    },
+    "A": "minecraft:stick"
+  },
+  "result": {
+    "id": "treeminer:lode_fence",
+    "count": 3
+  }
+}

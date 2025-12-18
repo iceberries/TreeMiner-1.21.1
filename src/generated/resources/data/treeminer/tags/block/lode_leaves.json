@@ -1,0 +1,12 @@
+{
+  "values": [
+    "treeminer:lode_leaves_coal",
+    "treeminer:lode_leaves_iron",
+    "treeminer:lode_leaves_copper",
+    "treeminer:lode_leaves_lapis",
+    "treeminer:lode_leaves_emerald",
+    "treeminer:lode_leaves_gold",
+    "treeminer:lode_leaves_redstone",
+    "treeminer:lode_leaves_diamond"
+  ]
+}

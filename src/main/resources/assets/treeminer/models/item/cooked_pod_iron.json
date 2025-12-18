@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "treeminer:item/cooked_pod_iron"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_nether_pod_quartz": {
+      "conditions": {
+        "items": [
+          {
+            "items": "treeminer:nether_pod_quartz"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "treeminer:nether_pod_quartz_to_cooked_nether_pod_quartz"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_nether_pod_quartz"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "treeminer:nether_pod_quartz_to_cooked_nether_pod_quartz"
+    ]
+  }
+}

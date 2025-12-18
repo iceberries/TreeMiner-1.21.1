@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "# #",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "tag": "treeminer:lode_planks"
+    }
+  },
+  "result": {
+    "id": "treeminer:lode_bowl",
+    "count": 4
+  }
+}

@@ -1,0 +1,14 @@
+// 1.21.1	2025-12-16T01:46:40.0684311	Tags for minecraft:block mod id treeminer
+213b4c328fe6b1eddc153e5f8f8dff7ffd786a65 data/minecraft/tags/block/fences.json
+9f1a584758740c487cee048f25071205ae39efff data/minecraft/tags/block/fence_gates.json
+5602c5da8718f91ae976bde15784fa60f389504c data/minecraft/tags/block/mineable/axe.json
+97dc8b4e099d8de80f4316141f5b6ed30c2f5ef5 data/minecraft/tags/block/mineable/pickaxe.json
+99d61e1acf151e4043693d603449f6bef14944e1 data/minecraft/tags/block/slabs.json
+e770cd42dca30848c343bc66f25d2ca50cf55b85 data/minecraft/tags/block/stairs.json
+23bf47d6c98cd5f1aefd54a53aefe9cb70c7140f data/treeminer/tags/block/lode_leaves.json
+88dfdfdb1dee9d2ec2f506338248baa26679578f data/treeminer/tags/block/lode_log.json
+5cd91e2fd7a50de3cd5b6699a4c2bf151842e0e1 data/treeminer/tags/block/lode_planks.json
+93a43cd92a7045c483564c8a854fdc7d461188b3 data/treeminer/tags/block/lode_sapling.json
+f6c491c509f1c498ee4b1f267eaf19694401e95c data/treeminer/tags/block/nether_lode_leaves.json
+69d58284ba8bcb72d602b3eae020f82d31a0c1f7 data/treeminer/tags/block/nether_lode_log.json
+ca64f536220d02e83f676601be24b3397adc67a3 data/treeminer/tags/block/nether_lode_sapling.json

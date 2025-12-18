@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "treeminer:block/lode_slab"
+    },
+    "type=top": {
+      "model": "treeminer:block/lode_slab_top"
+    },
+    "type=double": {
+      "model": "treeminer:block/lode_planks"
+    }
+  }
+}

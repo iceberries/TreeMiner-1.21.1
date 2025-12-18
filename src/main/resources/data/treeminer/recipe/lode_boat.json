@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "transport",
+  "pattern": [
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "tag": "treeminer:lode_planks"
+    }
+  },
+  "result": {
+    "id": "minecraft:oak_boat",
+    "count": 1
+  }
+}

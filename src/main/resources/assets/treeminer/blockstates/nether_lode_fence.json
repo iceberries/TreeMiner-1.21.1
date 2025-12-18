@@ -1,0 +1,44 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "north": "true"
+      },
+      "apply": {
+        "model": "treeminer:block/nether_lode_fence_side"
+      }
+    },
+    {
+      "when": {
+        "east": "true"
+      },
+      "apply": {
+        "model": "treeminer:block/nether_lode_fence_side",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "south": "true"
+      },
+      "apply": {
+        "model": "treeminer:block/nether_lode_fence_side",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "west": "true"
+      },
+      "apply": {
+        "model": "treeminer:block/nether_lode_fence_side",
+        "y": 270
+      }
+    },
+    {
+      "apply": {
+        "model": "treeminer:block/nether_lode_fence_post"
+      }
+    }
+  ]
+}

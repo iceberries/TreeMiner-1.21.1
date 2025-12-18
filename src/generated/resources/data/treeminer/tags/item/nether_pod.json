@@ -1,0 +1,12 @@
+{
+  "values": [
+    "treeminer:pod_coal",
+    "treeminer:pod_copper",
+    "treeminer:pod_diamond",
+    "treeminer:pod_emerald",
+    "treeminer:pod_gold",
+    "treeminer:pod_iron",
+    "treeminer:pod_lapis",
+    "treeminer:pod_redstone"
+  ]
+}

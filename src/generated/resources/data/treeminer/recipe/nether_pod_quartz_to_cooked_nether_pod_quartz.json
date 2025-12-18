@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "treeminer:nether_pod_quartz"
+  },
+  "result": {
+    "count": 1,
+    "id": "treeminer:cooked_nether_pod_quartz"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "tag": "treeminer:nether_lode_planks"
+    }
+  },
+  "result": {
+    "id": "treeminer:nether_lode_slab",
+    "count": 6
+  }
+}

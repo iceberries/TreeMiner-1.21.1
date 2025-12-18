@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "treeminer:block/lode_sapling_diamond"
+  },
+  "render_type": "minecraft:cutout"
+}

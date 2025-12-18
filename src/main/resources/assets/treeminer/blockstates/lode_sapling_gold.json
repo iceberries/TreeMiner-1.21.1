@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "stage=0": {
+      "model": "treeminer:block/lode_sapling_gold"
+    },
+    "stage=1": {
+      "model": "treeminer:block/lode_sapling_gold"
+    }
+  }
+}

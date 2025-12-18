@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "#"
+  ],
+  "key": {
+    "#": "treeminer:pod_redstone"
+  },
+  "result": {
+    "id": "minecraft:redstone",
+    "count": 2
+  }
+}

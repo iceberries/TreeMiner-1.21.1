@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "#"
+  ],
+  "key": {
+    "#": "treeminer:nether_pod_glowstone"
+  },
+  "result": {
+    "id": "minecraft:glowstone_dust",
+    "count": 2
+  }
+}

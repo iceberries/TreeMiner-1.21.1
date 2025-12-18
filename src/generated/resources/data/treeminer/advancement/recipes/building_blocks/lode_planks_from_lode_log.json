@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lode_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "treeminer:lode_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "treeminer:lode_planks_from_lode_log"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_lode_log"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "treeminer:lode_planks_from_lode_log"
+    ]
+  }
+}

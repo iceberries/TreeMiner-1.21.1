@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pod_lapis": {
+      "conditions": {
+        "items": [
+          {
+            "items": "treeminer:pod_lapis"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "treeminer:pod_lapis_to_cooked_pod_lapis"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pod_lapis"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "treeminer:pod_lapis_to_cooked_pod_lapis"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "#A#",
+    "###"
+  ],
+  "key": {
+    "A": "minecraft:oak_sapling",
+    "#": "minecraft:glowstone"
+  },
+  "result": {
+    "id": "treeminer:nether_lode_sapling_glowstone",
+    "count": 1
+  }
+}

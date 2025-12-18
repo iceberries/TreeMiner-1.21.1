@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "#A#",
+    "###"
+  ],
+  "key": {
+    "A": "minecraft:oak_sapling",
+    "#": "minecraft:nether_quartz_ore"
+  },
+  "result": {
+    "id": "treeminer:nether_lode_sapling_quartz",
+    "count": 1
+  }
+}

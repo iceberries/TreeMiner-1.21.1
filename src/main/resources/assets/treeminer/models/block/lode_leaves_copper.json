@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "treeminer:block/lode_leaves_copper"
+  },
+  "render_type": "minecraft:cutout_mipped"
+}
