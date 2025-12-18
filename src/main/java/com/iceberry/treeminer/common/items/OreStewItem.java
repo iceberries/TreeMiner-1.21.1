@@ -34,28 +34,25 @@ public class OreStewItem extends Item {
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity livingEntity) {
         if (level.isClientSide) {
-            return getItemStack(stack, level, livingEntity);
+            return this.getItemStack(stack, level, livingEntity);
         }
 
-        returnBowlTo(livingEntity, level);
+        this.returnBowlTo(livingEntity, level);
 
         var dat = stack.getComponents().get(DataComponents.CUSTOM_DATA);
         if (Objects.isNull(dat)) {
-            return getItemStack(stack, level, livingEntity);
+            return this.getItemStack(stack, level, livingEntity);
         }
 
         var tag = dat.copyTag();
         if (!tag.contains("ore_name")) {
-            return getItemStack(stack, level, livingEntity);
+            return this.getItemStack(stack, level, livingEntity);
         }
 
         var list = tag.getList("ore_name", Tag.TAG_STRING);
         if (list.isEmpty()) {
-            return getItemStack(stack, level, livingEntity);
+            return this.getItemStack(stack, level, livingEntity);
         }
-
-        // 检查是否有荧石粉增强
-        boolean hasGlowstone = tag.getBoolean("has_glowstone");
 
         list.forEach(it -> {
             var name = ResourceLocation.tryParse(it.getAsString());
@@ -63,7 +60,9 @@ public class OreStewItem extends Item {
                 return;
             }
             var item = BuiltInRegistries.ITEM.get(name);
-            if (item == null) {return;}
+            if (item == null) {
+                return;
+            }
             var holder = BuiltInRegistries.ITEM.getHolder(BuiltInRegistries.ITEM.getId(item));
             if (holder.isEmpty()) {
                 return;
@@ -75,7 +74,7 @@ public class OreStewItem extends Item {
             backFunc.onFinishUsing(stack, level, livingEntity);
         });
 
-        return getItemStack(stack, level, livingEntity);
+        return this.getItemStack(stack, level, livingEntity);
     }
 
     private @NotNull ItemStack getItemStack(ItemStack stack, Level level, LivingEntity livingEntity) {

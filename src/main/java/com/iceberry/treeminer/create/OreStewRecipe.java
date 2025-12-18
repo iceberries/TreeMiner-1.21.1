@@ -1,6 +1,4 @@
-package com.iceberry.treeminer.common;
-import com.iceberry.treeminer.create.TreeMinerItems;
-import com.iceberry.treeminer.create.TreeMinerRecipes;
+package com.iceberry.treeminer.create;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -62,22 +60,27 @@ public class OreStewRecipe extends CustomRecipe {
         return hasBowl && oreCount >= 1 && oreCount <= 2; // 1-2个矿物果
     }
     
+    // 矿石浆果物品映射表
+    private static final java.util.Map<net.minecraft.world.item.Item, Boolean> ORE_BERRIES = java.util.Map.ofEntries(
+        java.util.Map.entry(TreeMinerItems.COOKED_POD_COAL.get(), true),
+        java.util.Map.entry(TreeMinerItems.COOKED_POD_IRON.get(), true),
+        java.util.Map.entry(TreeMinerItems.COOKED_POD_COPPER.get(), true),
+        java.util.Map.entry(TreeMinerItems.COOKED_POD_LAPIS.get(), true),
+        java.util.Map.entry(TreeMinerItems.COOKED_POD_EMERALD.get(), true),
+        java.util.Map.entry(TreeMinerItems.COOKED_POD_GOLD.get(), true),
+        java.util.Map.entry(TreeMinerItems.COOKED_POD_REDSTONE.get(), true),
+        java.util.Map.entry(TreeMinerItems.COOKED_POD_DIAMOND.get(), true),
+        java.util.Map.entry(TreeMinerItems.COOKED_NETHER_POD_QUARTZ.get(), true),
+        java.util.Map.entry(TreeMinerItems.COOKED_NETHER_POD_GLOWSTONE.get(), true),
+        java.util.Map.entry(TreeMinerItems.COOKED_NETHER_POD_NETHERITE.get(), true),
+        java.util.Map.entry(TreeMinerItems.COOKED_NETHER_POD_GOLD.get(), true)
+    );
+    
     /**
      * 检查物品是否为矿石浆果
      */
     private boolean isOreBerry(ItemStack stack) {
-        return stack.is(TreeMinerItems.COOKED_POD_COAL.get()) ||
-               stack.is(TreeMinerItems.COOKED_POD_IRON.get()) ||
-               stack.is(TreeMinerItems.COOKED_POD_COPPER.get()) ||
-               stack.is(TreeMinerItems.COOKED_POD_LAPIS.get()) ||
-               stack.is(TreeMinerItems.COOKED_POD_EMERALD.get()) ||
-               stack.is(TreeMinerItems.COOKED_POD_GOLD.get()) ||
-               stack.is(TreeMinerItems.COOKED_POD_REDSTONE.get()) ||
-               stack.is(TreeMinerItems.COOKED_POD_DIAMOND.get()) ||
-               stack.is(TreeMinerItems.COOKED_NETHER_POD_QUARTZ.get()) ||
-               stack.is(TreeMinerItems.COOKED_NETHER_POD_GLOWSTONE.get()) ||
-               stack.is(TreeMinerItems.COOKED_NETHER_POD_NETHERITE.get()) ||
-               stack.is(TreeMinerItems.COOKED_NETHER_POD_GOLD.get());
+        return ORE_BERRIES.containsKey(stack.getItem());
     }
 
     @Override

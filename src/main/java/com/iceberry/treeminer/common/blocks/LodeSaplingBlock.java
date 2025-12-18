@@ -52,7 +52,7 @@ public class LodeSaplingBlock extends SaplingBlock {
      * @return 如果方块是可放置的，返回 true；否则返回 false。
      */
     private boolean isPlaceableBlock(BlockState state) {
-        return isBlock(state, saplingProperties.getPlaceable(), saplingProperties.getPlaceableTags());
+        return this.isBlock(state, this.saplingProperties.getPlaceable(), this.saplingProperties.getPlaceableTags());
     }
 
     /**
@@ -62,7 +62,7 @@ public class LodeSaplingBlock extends SaplingBlock {
      * @return 如果方块是可生长的，返回 true；否则返回 false。
      */
     private boolean isGrowableBlock(BlockState state) {
-        return isPlaceableBlock(state);
+        return this.isPlaceableBlock(state);
     }
 
     /**
@@ -89,7 +89,7 @@ public class LodeSaplingBlock extends SaplingBlock {
     protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos){
         BlockPos blockpos = pos.below();
         BlockState belowBlockState = level.getBlockState(blockpos);
-        if (!isPlaceableBlock(belowBlockState)) return false;
+        if (!this.isPlaceableBlock(belowBlockState)) return false;
         return super.canSurvive(state, level, pos);
     }
 
@@ -103,8 +103,8 @@ public class LodeSaplingBlock extends SaplingBlock {
      */
     @Override
     protected void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource randomSource) {
-        if (!isGrowableBlock(level.getBlockState(pos.below()))) return;
-        advanceTree(level, pos, state, randomSource);
+        if (!this.isGrowableBlock(level.getBlockState(pos.below()))) return;
+        this.advanceTree(level, pos, state, randomSource);
     }
 
     @Override

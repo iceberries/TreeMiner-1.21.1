@@ -1,25 +1,151 @@
+# TreeMiner 1.21.1 - 矿树节模组
 
-Installation information
-=======
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Minecraft](https://img.shields.io/badge/Minecraft-1.21.1-green.svg)](https://www.minecraft.net/)
+[![NeoForged](https://img.shields.io/badge/NeoForged-21.1.216-orange.svg)](https://neoforged.net/)
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+## 🌳 项目介绍
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+TreeMiner 是一个为 Minecraft 1.21.1 设计的创新模组，它将传统的矿物开采方式转变为通过种植特殊的矿树来获取资源。这个模组为游戏增添了全新的资源获取机制，让玩家可以通过农业的方式来"开采"矿物。
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+### 主要特性
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+- **矿树系统**：种植各种矿石对应的树木，从树叶中收获矿物果实
+- **矿石浆果**：每种矿石都有对应的浆果，可以食用或用于制作
+- **矿物炖汤**：使用多种矿石浆果制作具有特殊效果的炖汤
+- **完整的生态链**：从树苗到成熟树木，完整的矿物农业系统
+- **下界矿石支持**：包括下界石英、荧石、下界金和下界合金
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+## 🚀 快速开始
+
+### 安装要求
+
+- **Minecraft**: 1.21.1
+- **NeoForged**: 21.1.216 或更高版本
+- **Java**: 21
+
+### 安装步骤
+
+1. 下载并安装 [NeoForged](https://neoforged.net/)
+2. 将 TreeMiner 模组文件放入 `mods` 文件夹
+3. 启动 Minecraft 并选择 NeoForged 版本
+
+## 🌱 游戏玩法
+
+### 矿树种植
+
+1. **获取树苗**：通过破坏矿树叶有几率获得树苗
+2. **种植树苗**：在合适的土壤上种植矿树树苗
+3. **等待生长**：矿树会自然生长，产出矿石浆果
+
+### 可用的矿树类型
+
+- **主世界矿石**：煤炭、铁、铜、青金石、红石、金、绿宝石、钻石
+- **下界矿石**：下界石英、荧石、下界金、下界合金
+
+### 矿石浆果用途
+
+1. **直接食用**：提供基础的饥饿值恢复
+2. **制作矿物炖汤**：在合成台中与碗结合，制作具有特殊效果的炖汤
+3. **燃料用途**：煤炭浆果可以作为燃料使用
+
+### 矿物炖汤系统
+
+使用合成台将碗和矿石浆果组合制作矿物炖汤：
+- **基础配方**：碗 + 1-2种矿石浆果
+- **增强效果**：可以添加荧石浆果增强效果
+- **特殊效果**：每种矿石对应不同的药水效果
+
+## 🔧 开发信息
+
+### 项目结构
+
+```
+src/main/java/com/iceberry/treeminer/
+├── TreeMinerMain.java          # 主模组类
+├── common/                     # 通用功能模块
+│   ├── blocks/                # 自定义方块
+│   ├── items/                 # 自定义物品
+│   └── TreeMinerTreeGrower.java # 树木生成器
+├── create/                     # 创建模块
+│   ├── TreeMinerBlocks.java   # 方块注册
+│   ├── TreeMinerItems.java    # 物品注册
+│   ├── TreeMinerRecipes.java  # 配方注册
+│   ├── TreeMinerTab.java      # 创造模式标签
+│   └── OreStewRecipe.java     # 炖汤配方
+└── datagen/                   # 数据生成模块
+```
+
+### 构建说明
+
+```bash
+# 克隆项目
+git clone https://github.com/iceberries/TreeMiner-1.21.1.git
+
+# 进入项目目录
+cd TreeMiner-1.21.1
+
+# 构建模组
+./gradlew build
+
+# 构建并运行测试
+./gradlew build test
+```
+
+## 📖 API 使用
+
+### 自定义矿石浆果效果
+
+开发者可以通过注册自定义效果来扩展模组功能：
+
+```java
+// 注册新的矿石浆果效果
+OreStewItem.EFFECT_TABLE.put(yourCustomItem, (stack, level, entity) -> {
+    // 自定义效果逻辑
+    entity.addEffect(new MobEffectInstance(MobEffects.YOUR_EFFECT, duration, amplifier));
+});
+```
+
+### 集成数据包
+
+模组支持数据包自定义，可以修改：
+- 矿石浆果的掉落率
+- 矿树的生成配置
+- 配方和合成表
+
+## 🤝 贡献指南
+
+我们欢迎社区贡献！请遵循以下步骤：
+
+1. Fork 本仓库
+2. 创建功能分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 开启 Pull Request
+
+## 📜 许可证
+
+本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
+
+## 🙏 致谢
+
+- **原作者**：尽
+- **移植者**：iceberry
+
+## 🔗 相关链接
+
+- [GitHub 仓库](https://github.com/iceberries/TreeMiner-1.21.1)
+- [问题反馈](https://github.com/iceberries/TreeMiner-1.21.1/issues)
+- [NeoForged 文档](https://docs.neoforged.net/)
+
+## 📞 支持
+
+如果你遇到任何问题或有建议，请通过以下方式联系我们：
+
+1. 在 GitHub 上创建 [Issue](https://github.com/iceberries/TreeMiner-1.21.1/issues)
+2. 加入 NeoForged Discord 社区
+3. 查看项目 Wiki 获取更多信息
+
+---
+
+**享受种植矿物的乐趣吧！🌳⛏️**

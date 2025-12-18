@@ -95,10 +95,10 @@ public class LodeLeavesBlock extends LeavesBlock {
 
         RandomSource random = params.getLevel().getRandom();
         if (random.nextInt(100) <= 9 + referenceRatio) {
-            itemList.add(sapling.get().getDefaultInstance());
+            itemList.add(this.sapling.get().getDefaultInstance());
         }
         if (state.getValue(STAGE_3) == 3) {
-            ItemStack item = fruit.get().getDefaultInstance();
+            ItemStack item = this.fruit.get().getDefaultInstance();
             item.setCount(random.nextInt(1 + referenceQuantity, 3 + referenceQuantity));
             itemList.add(item);
         }

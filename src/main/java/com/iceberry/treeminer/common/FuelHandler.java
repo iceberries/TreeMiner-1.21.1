@@ -16,7 +16,7 @@ public class FuelHandler {
     
     /**
      * 监听燃料燃烧时间事件
-     * 为煤果实添加燃料属性
+     * 为煤果实添加燃料属性，并确保消耗物品
      */
     @SubscribeEvent
     public static void onFurnaceFuelBurnTime(FurnaceFuelBurnTimeEvent event) {
@@ -25,6 +25,10 @@ public class FuelHandler {
         // 为煤果实添加燃料属性，燃烧时长与木板一致（300 ticks = 15秒）
         if (item == TreeMinerItems.POD_COAL.get()) {
             event.setBurnTime(300);
+            // 确保消耗物品
+            if (event.getItemStack().getCount() > 0) {
+                event.getItemStack().shrink(1);
+            }
         }
     }
 }

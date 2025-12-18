@@ -1,6 +1,5 @@
 package com.iceberry.treeminer.create;
 
-import com.iceberry.treeminer.common.OreStewRecipe;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.neoforged.neoforge.registries.DeferredHolder;

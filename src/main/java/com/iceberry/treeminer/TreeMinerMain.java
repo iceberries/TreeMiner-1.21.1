@@ -24,50 +24,48 @@ public class TreeMinerMain {
         TreeMinerRecipes.RECIPES.register(modEventBus);
         TreeMinerTab.CREATIVE_MODE_TABS.register(modEventBus);
 
-
-
         // 初始化配方和效果
         this.initRecipe();
     }
 
     public void initRecipe() {
         // 注册矿物炖汤效果
-        registerOreStewEffects();
+        this.registerOreStewEffects();
     }
 
     private void registerOreStewEffects() {
         // 煤炭浆果 - 火焰抗性
-        OreStewItem.EFFECT_TABLE.put(TreeMinerItems.COOKED_POD_COAL, createEffect(COAL_EFFECT));
+        OreStewItem.EFFECT_TABLE.put(TreeMinerItems.COOKED_POD_COAL, this.createEffect(COAL_EFFECT));
         
         // 铁浆果 - 伤害抗性
-        OreStewItem.EFFECT_TABLE.put(TreeMinerItems.COOKED_POD_IRON, createEffect(IRON_EFFECT));
+        OreStewItem.EFFECT_TABLE.put(TreeMinerItems.COOKED_POD_IRON, this.createEffect(IRON_EFFECT));
         
         // 铜浆果 - 速度提升
-        OreStewItem.EFFECT_TABLE.put(TreeMinerItems.COOKED_POD_COPPER, createEffect(COPPER_EFFECT));
+        OreStewItem.EFFECT_TABLE.put(TreeMinerItems.COOKED_POD_COPPER, this.createEffect(COPPER_EFFECT));
         
         // 青金石浆果 - 水下呼吸
-        OreStewItem.EFFECT_TABLE.put(TreeMinerItems.COOKED_POD_LAPIS, createEffect(LAPIS_EFFECT));
+        OreStewItem.EFFECT_TABLE.put(TreeMinerItems.COOKED_POD_LAPIS, this.createEffect(LAPIS_EFFECT));
         
         // 祖母绿浆果 - 村庄英雄
-        OreStewItem.EFFECT_TABLE.put(TreeMinerItems.COOKED_POD_EMERALD, createEffect(EMERALD_EFFECT));
+        OreStewItem.EFFECT_TABLE.put(TreeMinerItems.COOKED_POD_EMERALD, this.createEffect(EMERALD_EFFECT));
         
         // 金浆果 - 火焰抗性
-        OreStewItem.EFFECT_TABLE.put(TreeMinerItems.COOKED_POD_GOLD, createEffect(GOLD_EFFECT));
+        OreStewItem.EFFECT_TABLE.put(TreeMinerItems.COOKED_POD_GOLD, this.createEffect(GOLD_EFFECT));
         
         // 红石浆果 - 挖掘速度
-        OreStewItem.EFFECT_TABLE.put(TreeMinerItems.COOKED_POD_REDSTONE, createEffect(REDSTONE_EFFECT));
+        OreStewItem.EFFECT_TABLE.put(TreeMinerItems.COOKED_POD_REDSTONE, this.createEffect(REDSTONE_EFFECT));
         
         // 钻石浆果 - 吸收效果
-        OreStewItem.EFFECT_TABLE.put(TreeMinerItems.COOKED_POD_DIAMOND, createEffect(DIAMOND_EFFECT));
+        OreStewItem.EFFECT_TABLE.put(TreeMinerItems.COOKED_POD_DIAMOND, this.createEffect(DIAMOND_EFFECT));
         
         // 下界石英浆果 - 力量效果
-        OreStewItem.EFFECT_TABLE.put(TreeMinerItems.COOKED_NETHER_POD_QUARTZ, createEffect(QUARTZ_EFFECT));
+        OreStewItem.EFFECT_TABLE.put(TreeMinerItems.COOKED_NETHER_POD_QUARTZ, this.createEffect(QUARTZ_EFFECT));
         
         // 荧石浆果 - 发光效果
-        OreStewItem.EFFECT_TABLE.put(TreeMinerItems.COOKED_NETHER_POD_GLOWSTONE, createEffect(GLOWSTONE_EFFECT));
+        OreStewItem.EFFECT_TABLE.put(TreeMinerItems.COOKED_NETHER_POD_GLOWSTONE, this.createEffect(GLOWSTONE_EFFECT));
         
         // 下界金浆果 - 火焰抗性
-        OreStewItem.EFFECT_TABLE.put(TreeMinerItems.COOKED_NETHER_POD_GOLD, createEffect(NETHER_GOLD_EFFECT));
+        OreStewItem.EFFECT_TABLE.put(TreeMinerItems.COOKED_NETHER_POD_GOLD, this.createEffect(NETHER_GOLD_EFFECT));
         
         // 下界合金浆果 - 复合效果(抗性提升加抗火)
         OreStewItem.EFFECT_TABLE.put(TreeMinerItems.COOKED_NETHER_POD_NETHERITE, (stack, level, entity) -> {
@@ -104,16 +102,16 @@ public class TreeMinerMain {
     public OreStewItem.ItemFinishUsing createEffect(MobEffectInstance effect) {
         return (item, level, entity) -> {
             // 检查是否有荧石果
-            AtomicBoolean glowstone = new AtomicBoolean(false);
+            boolean Glowstone = false;
             var data = item.getComponents().get(DataComponents.CUSTOM_DATA);
             if (data != null) {
                 var tag = data.copyTag();
-                glowstone.set(tag.getBoolean("has_glowstone"));
+                Glowstone = tag.getBoolean("has_glowstone");
             }
             
             // 根据是否有荧石果调整效果
             final MobEffectInstance finalEffect;
-            if (glowstone.get()) {
+            if (Glowstone) {
                 // 有荧石果：效果等级+1，持续时间减半
                 finalEffect = new MobEffectInstance(
                     effect.getEffect(), 
